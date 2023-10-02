@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visual Sales Statistics</title>
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/DashSaleView/css/index.css">
+    <script type="text/javascript" src="/DashSaleView/js/index.js"></script>
+    <link href="http://js-grid.com/css/jsgrid.min.css" rel="stylesheet">
+    <link href="http://js-grid.com/css/jsgrid-theme.min.css" rel="stylesheet"> 
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://js-grid.com/js/jsgrid.min.js"></script>
+   
+  </head>
+
+  <body>
+
+    <section class="layout">
+
+      <div class="chart-containerr">
+         <canvas id="adjustmentsChart" width="250px" height="250px"></canvas>
+      </div>
+        
+      <section class="layout-header">
+
+            <div class="header-container">
+                  <h1>
+                     Sales Statistics for <span id="CurrentMonth"></span>
+                  </h1>
+            </div>
+            
+              <div class="dashboard-container">
+
+                    <div class="statistic-item">
+                                             
+                          <h3>Total Transations</h3>
+                          <p id="TotalTransations"></p>
+                    </div>
+            
+                      <div class="statistic-item">                       
+                          <h3>Quantity Sold</h3>
+                          <p id="QuantitySold"></p>
+                      </div>
+            
+                      <div class="statistic-item">
+                                      
+                          <h3>Total Sales</h3>
+                          <p id="TotalSales"></p>
+                      </div>
+            
+                      <div class="statistic-item">                         
+                          <h3>Best Selling Product</h3>
+                          <p id="BestSellingProduct"></p>
+                     </div>
+                     
+               </div>
+                          
+        </section>
+
+     </section>
+  
+        <div class="show-curent-data">
+          <span class="curent-data-label">Current/previous month data</span>
+            <input type="checkbox" id="showCurentData" style="color: blue;" />
+               <label class="switch" for="showCurentData">
+                 <span class="slider round">
+                   <span id="inner-circle"></span>
+          </span>    
+               </label>
+        </div>  
+      
+          <h2 style="text-align: center; margin-bottom: 20px;">Salese Transaction</h2>
+           <div class="jsgrid" id="jsGrid"></div>             
+  </body>
+</html>
